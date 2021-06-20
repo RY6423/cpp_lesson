@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-#define ITERATTION 500
+#define ITERATTION 1000
 
 int main()
 {
