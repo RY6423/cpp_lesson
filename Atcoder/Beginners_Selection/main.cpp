@@ -1,15 +1,31 @@
+#include <array>
 #include <iostream>
-#include <string>
+
+int factorTwo(int x)
+{
+    int count = 0;
+    while (x % 2 == 0 && x) {
+        x /= 2;
+        count++;
+    }
+    return count;
+}
 
 int main()
 {
-    std::string s;
-    std::cin >> s;
-    int count = 0;
-    for (int i = 0; i < 3; i++) {
-        if (s[i] == '1') {
-            count++;
+    int N;
+    std::cin >> N;
+
+    int min = 30;
+
+    for (int i = 0; i < N; i++) {
+        int x;
+        std::cin >> x;
+        int y = factorTwo(x);
+        if (min > y) {
+            min = y;
         }
     }
-    std::cout << count << std::endl;
+
+    std::cout << min << std::endl;
 }
